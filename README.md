@@ -13,6 +13,8 @@
 | File | What it is |
 | :--- | :--- |
 | `SKAuth.cs` | Drop-in SDK class — add it to any .NET 8 Windows project |
+| `Program.cs` + `LoginForm.cs` + `MainForm.cs` | Full runnable WinForms demo app (net8.0-windows) — login form + main window |
+| `CatCrypt-CSharp.sln` / `.csproj` | Solution + project files — open the .sln and run |
 
 Requires the `System.Management` NuGet package (for the HWID).
 
