@@ -12,7 +12,7 @@
 
 | File | What it is |
 | :--- | :--- |
-| `SKAuth.cs` | Drop-in SDK class — add it to any .NET 8 Windows project |
+| `CatCrypt.cs` | Drop-in SDK class — add it to any .NET 8 Windows project |
 | `Program.cs` + `LoginForm.cs` + `MainForm.cs` | Full runnable WinForms demo app (net8.0-windows) — login form + main window |
 | `CatCrypt-CSharp.sln` / `.csproj` | Solution + project files — open the .sln and run |
 
@@ -24,10 +24,10 @@ Requires the `System.Management` NuGet package (for the HWID).
 git clone https://github.com/ScriptKittenss/CatCrypt-CSharp-Example.git
 ```
 
-Add `SKAuth.cs` to your project, install `System.Management`, then:
+Add `CatCrypt.cs` to your project, install `System.Management`, then:
 
 ```csharp
-var auth = new SKAuth("YOUR_APP_ID", "1.0");
+var auth = new CatCrypt("YOUR_APP_ID", "1.0");
 
 var res = await auth.Login("username", "password");
 if (!res.GetProperty("ok").GetBoolean())
@@ -48,7 +48,7 @@ if (auth.IsPaid())
 
 | Method | Description |
 | :--- | :--- |
-| `new SKAuth(appId, version = "1.0")` | Create the client. Computes the machine HWID. |
+| `new CatCrypt(appId, version = "1.0")` | Create the client. Computes the machine HWID. |
 | `Login(username, password)` | Authenticate. On success `User` holds `username`, `plan`, `expires`, `email`, `apiKey`. On failure show the `message` as-is. |
 | `Register(username, password, email = "", licenseKey = "")` | Create an account. `licenseKey` is optional. |
 | `Redeem(username, licenseKey)` | Apply a license key to an existing account. |
