@@ -12,7 +12,7 @@ namespace CatCryptExample
         private const string APP_VERSION = "1.0";
         // ╚══════════════════════════════════════════╝
 
-        private readonly SKAuth _auth = new(APP_ID, APP_VERSION);
+        private readonly CatCrypt _auth = new(APP_ID, APP_VERSION);
 
         public LoginForm()
         {
