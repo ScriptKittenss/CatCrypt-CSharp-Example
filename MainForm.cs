@@ -12,9 +12,9 @@ namespace CatCryptExample
 {
     public partial class MainForm : Form
     {
-        private readonly SKAuth _auth;
+        private readonly CatCrypt _auth;
 
-        public MainForm(SKAuth auth)
+        public MainForm(CatCrypt auth)
         {
             _auth = auth;
             InitializeComponent();
